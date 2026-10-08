@@ -1,0 +1,64 @@
+{
+  "format": "sad-review-scope-lock",
+  "format_version": 1,
+  "scope_version": 2,
+  "approved_on": "2026-10-07",
+  "timezone": "Asia/Ho_Chi_Minh",
+  "approval_statement": "Approved. Lock exactly this scope.",
+  "scope": {
+    "path": "review/scope.md",
+    "sha256": "54f1a6cd1e6ee071c53e9d65cd5829c381597b1956650cececd378879da2c75c"
+  },
+  "controlled_inputs": [
+    {
+      "path": "review-input/sad/umd-kmd-sad.md",
+      "sha256": "87d325a8d5cefbfa58e84b369bd8cb4f79e7fe81663203ae6165c954f3afc6ec"
+    },
+    {
+      "path": "review-input/checklist/sad-review-checklist.md",
+      "sha256": "23ec05c042c527e201c0c40edefb473293f1aafd679ccaafe11405b8e45baa36"
+    },
+    {
+      "path": "review-input/guideline/sad-writing-guideline.md",
+      "sha256": "9723cd4f102bb2c4fd6bf03ae581fa79b800ccd056486b1c82ae283550927620"
+    }
+  ],
+  "repositories": [
+    {
+      "path": "source/bos-umd",
+      "branch": "develop",
+      "commit": "86e0ab17209d7af8f741ac34c158ebbf71612ea4",
+      "local_branch_commit": "86e0ab17209d7af8f741ac34c158ebbf71612ea4",
+      "worktree": "clean including untracked files"
+    },
+    {
+      "path": "source/bos-kmd",
+      "branch": "develop",
+      "commit": "12d235aeedb8aa55ede24927c9e09f88c8f278c4",
+      "local_branch_commit": "12d235aeedb8aa55ede24927c9e09f88c8f278c4",
+      "worktree": "clean including untracked files"
+    }
+  ],
+  "additional_controlled_references": [],
+  "authorized_outputs": [
+    "review/scope.md",
+    "review/scope.lock",
+    "review/interfaces/01-cluster.md",
+    "review/interfaces/02-device-memory-access.md",
+    "review/interfaces/03-device-register-access.md",
+    "review/interfaces/04-multicast-write.md",
+    "review/interfaces/05-tlb-configuration.md",
+    "review/findings/findings.md",
+    "review/evidence/document-evidence.md",
+    "review/evidence/umd-code-evidence.md",
+    "review/evidence/kmd-code-evidence.md",
+    "review/evidence/traceability.md",
+    "review/reports/sad-review-report.md"
+  ],
+  "execution_order": [
+    "Create and verify lock",
+    "Complete five independent interface reviews",
+    "Generate six shared evidence/findings/report artifacts"
+  ],
+  "scope_change_policy": "Stop affected work and obtain explicit approval; do not silently refresh this lock."
+}
